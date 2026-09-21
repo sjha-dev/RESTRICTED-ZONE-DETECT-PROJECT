@@ -88,7 +88,7 @@ print("Review the mask. Press ANY KEY to start monitoring...")
 cv2.waitKey(0)
 cv2.destroyWindow("Restricted Area Mask")
 
-print("\n🚀 Monitoring Started! Press 'q' on video window to exit.")
+print("\n Monitoring Started! Press 'q' on video window to exit.")
 
 # Main Monitoring Window setup with normal sizing
 cv2.namedWindow("Restricted Zone Detection", cv2.WINDOW_NORMAL)
@@ -125,7 +125,7 @@ while True:
     cv2.polylines(frame, [restricted_area_roi], isClosed=True, color=(0, 0, 255), thickness=2)
 
     if alarm_trigger:
-        cv2.putText(frame, "⚠️ ALARM: RESTRICTED ZONE VIOLATION!", (30, 40), 
+        cv2.putText(frame, " ALARM: RESTRICTED ZONE VIOLATION!", (30, 40), 
                     cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 0, 255), 3)
         current_time = time.time()
         if current_time - last_beep_time > 0.8:
